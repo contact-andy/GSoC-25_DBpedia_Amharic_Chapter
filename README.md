@@ -24,7 +24,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - New Pages Created: **11**  
   - Updated Pages to support templates: **13**  
 
-- **Mapping Coverage Progress**  [DBpedia Mappings Wiki](https://mappings.dbpedia.org/index.php/Mapping_am)
+- **Mapping Coverage Progress**  [View Amharic Mapping](https://mappings.dbpedia.org/index.php/Mapping_am)
   - Previous Coverage: **17** mapped templates  
   - Current Coverage: **97** mapped templates   
 
