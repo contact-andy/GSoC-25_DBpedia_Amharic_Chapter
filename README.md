@@ -36,7 +36,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
 - **GitHub Contributions (Pending/Planned PRs)**  
   - New **mapping statistics report** and updated **ignore list** to be submitted as a PR.  
 
-- **Documentation**  
+- **Documentation**
   - Provided a comprehensive **guide for creating, mapping, and extracting structured data** from Amharic Wikipedia using the DBpedia Extraction Framework.  
   - Covers the **end-to-end workflow**:  
     - Creating and updating Wikipedia templates  
@@ -47,6 +47,14 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - Includes **challenges, solutions, and recommendations** to improve coverage and quality.  
   - Designed to help **contributors, mentors, and researchers** reproduce, extend, and contribute effectively to the Amharic DBpedia chapter.  
 
+Read the documentation here: [GSoC 2025 Documentation](https://drive.google.com/file/d/1QO0FRSY1AEremEUcky7IG6AgXtnotbig/view?usp=drive_link)  
+
+---
+
+## Blog
+Throughout the project, progress and milestones have been documented in weekly blog posts. These blogs detail the technical steps, challenges faced, and solutions implemented.  
+
+Read the blog here: [GSoC 2025 DBpedia Amharic Blog](http://contact-andy.github.io/gsoc-2025-dbpedia)  
 ---
 
 ## Next Steps  
