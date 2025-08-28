@@ -58,4 +58,4 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
 ---
 
-✨ This project lays the foundation for a **fully functional Amharic DBpedia chapter**, bridging the knowledge gap for underrepresented languages and enriching the global Semantic Web.  
+This project lays the foundation for a **fully functional Amharic DBpedia chapter**, bridging the knowledge gap for underrepresented languages and enriching the global Semantic Web.  
