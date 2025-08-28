@@ -55,6 +55,7 @@ Read the documentation here: [GSoC 2025 Documentation](https://drive.google.com/
 Throughout the project, progress and milestones have been documented in weekly blog posts. These blogs detail the technical steps, challenges faced, and solutions implemented.  
 
 Read the blog here: [GSoC 2025 DBpedia Amharic Blog](http://contact-andy.github.io/gsoc-2025-dbpedia)  
+
 ---
 
 ## Next Steps  
