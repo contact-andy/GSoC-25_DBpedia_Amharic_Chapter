@@ -7,14 +7,6 @@ This project proposes to enhance the **Amharic chapter of DBpedia** by extractin
 
 The output will be published as **RDF triples** and made accessible via a user-friendly web interface, following **FAIR (Findable, Accessible, Interoperable, Reusable)** data principles.  
 
-### Deliverables  
-- An **Amharic-compatible extension** to the DBpedia Extraction Framework.  
-- New **infobox mapping templates** for Amharic Wikipedia.  
-- An **automated extraction pipeline** with support for citations, disambiguation, topical concepts, and personal data.  
-- A **structured knowledge graph** (RDF triples) linked with English DBpedia and Wikidata.  
-- A lightweight **web interface** with SPARQL querying and multilingual support.  
-- Comprehensive **documentation** covering setup, usage, and FAIR-compliant publishing.  
-
 ---
 
 ## Key Achievements and Deliverables  
@@ -33,10 +25,11 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - Managed **Amharic ignore list** (templates and properties excluded from statistics). Suggested additional templates for the ignore list.  
   - Generated statistics locally with `infobox-properties` file (replacing `infobox_test`).  
 
-- **GitHub Contributions (Pending/Planned PRs)**  
-  - New **mapping statistics report** and updated **ignore list** to be submitted as a PR.  
+- **GitHub Contributions**  
+  - Updated **amharic mappings**, **mapping statistics report**, and **ignore list** has been submitted as a PR. [view change list](https://github.com/dbpedia/extraction-framework/pull/781)  
+  - New way of generating mapping statistics locally with `infobox-properties` file (replacing `infobox_test`) to be submitted as a PR.[View change list](https://github.com/contact-andy/extraction-framework/tree/local-stats-generation)
 
-- **Documentation**
+- **Documentation** 
   - Provided a comprehensive **guide for creating, mapping, and extracting structured data** from Amharic Wikipedia using the DBpedia Extraction Framework.  
   - Covers the **end-to-end workflow**:  
     - Creating and updating Wikipedia templates  
@@ -47,7 +40,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - Includes **challenges, solutions, and recommendations** to improve coverage and quality.  
   - Designed to help **contributors, mentors, and researchers** reproduce, extend, and contribute effectively to the Amharic DBpedia chapter.  
 
-Read the documentation here: [GSoC 2025 Documentation](https://drive.google.com/file/d/1QO0FRSY1AEremEUcky7IG6AgXtnotbig/view?usp=drive_link)  
+Read the documentation here: [GSoC 2025 Documentation](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf)  
 
 ---
 
