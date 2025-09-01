@@ -65,7 +65,8 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
   Before generating new statistics, the server was run to analyze the existing Amharic DBpedia mappings.
 
-  *Consider this is a screenshot of the old statistics*
+  ![Old Statistics Screenshot](./images/old-statistics-screenshot.png)  
+  *Figure: Screenshot of old mapping statistics*
 
   ##### Summary of Mapping Coverage
 
@@ -121,10 +122,36 @@ The output will be published as **RDF triples** and made accessible via a user-f
   The improvements demonstrate both breadth and depth: all templates are now covered, template occurrences are fully aligned, and property coverage has improved substantially. However, further effort is still needed to achieve full coverage of properties, especially for rarely used or inconsistent ones.
 
  
+  ### GitHub Contributions
 
-- **GitHub Contributions**  
-  - Updated **amharic mappings**, **mapping statistics report**, and **ignore list** has been submitted as a PR. [view change list](https://github.com/dbpedia/extraction-framework/pull/781)  
-  - New way of generating mapping statistics locally with `infobox-properties` file (replacing `infobox_test`) to be submitted as a PR.[View change list](https://github.com/contact-andy/extraction-framework/tree/local-stats-generation)
+  #### 1. Improvements to Amharic Mappings and Statistics
+
+  - **Amharic mappings**, the **mapping statistics report**, and the **Amharic ignore list** have been updated and submitted as a Pull Request.
+  - These updates significantly improved coverage of templates and properties, as documented in the new statistics report.
+
+  🔗 [View Pull Request #781](https://github.com/dbpedia/extraction-framework/pull/781)
+
+
+  #### 2. New Method for Generating Mapping Statistics Locally
+
+  - Developed a new approach for generating mapping statistics locally using the `infobox-properties.ttl` file instead of the outdated `infobox_test.ttl`.
+  - This approach solves the issue of templates being detected but their properties being ignored in the statistics output.
+  - This change improves reliability and makes local testing and validation easier for contributors working with newer Wikipedia dumps.
+
+  Code changes to support this are staged and will be submitted as a separate Pull Request.
+
+  [View Code Branch – local-stats-generation](https://github.com/contact-andy/extraction-framework/tree/local-stats-generation)
+
+  
+  #### Summary
+
+  These contributions have improved:
+  - **Mapping coverage** and consistency for the Amharic DBpedia chapter.
+  - **Development tooling** for contributors working with statistics.
+  - **Automation and reliability** in generating and validating mapping data.
+
+
+
 
 - **Documentation** 
   - Provided a comprehensive **guide for creating, mapping, and extracting structured data** from Amharic Wikipedia using the DBpedia Extraction Framework.  
