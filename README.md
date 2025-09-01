@@ -61,15 +61,13 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
   Mapping statistics are essential for evaluating the quality and completeness of DBpedia mappings. They provide insights into how many templates and properties are mapped, how frequently they appear in Wikipedia pages, and where inconsistencies or gaps exist. By generating these statistics locally, we can continuously monitor progress, identify problematic mappings, and validate the effectiveness of recent updates to the Amharic DBpedia project.
 
-  ---
-
-  ### Old Statistics Report (Amharic)
+  #### Old Statistics Report (Amharic)
 
   Before generating new statistics, the server was run to analyze the existing Amharic DBpedia mappings.
 
   *Consider this is a screenshot of the old statistics*
 
-  #### Summary of Mapping Coverage
+  ##### Summary of Mapping Coverage
 
   | Metric                      | Count | Total | Percentage |
   |-----------------------------|-------|-------|------------|
@@ -81,13 +79,13 @@ The output will be published as **RDF triples** and made accessible via a user-f
   Analysis has been done on old statistics report and identified template limitations, mapping issues, proposed solutions, and executed them successfully.
 
 
-  ### Technical Challenges and Fixes
+  #### Technical Challenges and Fixes
 
-  #### Problem Encountered
+  ##### Problem Encountered
 
   While generating statistics, the template count consistently returned zero. Templates were being detected, but their associated properties were not. As a result, all templates were ignored in the statistics output. After debugging, I identified that the issue was caused by reliance on `infobox_test.ttl`. This file did not properly support the current dumps.
 
-  #### Fix Implemented
+  ##### Fix Implemented
 
   The solution was to switch from `infobox_test.ttl` to `infobox_properties.ttl`, which contains the required property mappings. This required modifications in the following classes:
 
@@ -102,7 +100,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
   In addition, **Amharic ignore list** (templates and properties excluded from statistics) has been managed. [View change log](https://github.com/contact-andy/extraction-framework/blob/GSoc-2025-Amharic-Mapping/server/src/main/statistics/ignorelist_am.txt)
 
-  ### Current Amharic Mapping Statistics Report
+  #### Current Amharic Mapping Statistics Report
 
   [View change log](https://github.com/contact-andy/extraction-framework/blob/GSoc-2025-Amharic-Mapping/server/src/main/statistics/mappingstats_am.txt)
 
@@ -111,7 +109,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
   ![Updated Statistics Screenshot](./images/updated-statistics-screenshot.png)  
   *Figure: Screenshot of current mapping statistics*
 
-  ### Summary of Mapping Coverage
+  ##### Summary of Mapping Coverage
 
   | Metric                      | Count | Total | Percentage | Notes                                  |
   |-----------------------------|-------|-------|------------|----------------------------------------|
