@@ -56,10 +56,73 @@ The output will be published as **RDF triples** and made accessible via a user-f
   A detailed breakdown of the created and updated template mappings, including direct links to each, is provided in [Appendix C](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf).
 
 
-- **Template & Mapping Improvements**  
-  - Analyzed old statistics report, identified template limitations and mapping issues, proposed solutions, and executed them successfully.  
-  - Managed **Amharic ignore list** (templates and properties excluded from statistics). Suggested additional templates for the ignore list.  
-  - Generated statistics locally with `infobox-properties` file (replacing `infobox_test`).  
+
+  ### Mapping Statistics Generation
+
+  Mapping statistics are essential for evaluating the quality and completeness of DBpedia mappings. They provide insights into how many templates and properties are mapped, how frequently they appear in Wikipedia pages, and where inconsistencies or gaps exist. By generating these statistics locally, we can continuously monitor progress, identify problematic mappings, and validate the effectiveness of recent updates to the Amharic DBpedia project.
+
+  ---
+
+  ### Old Statistics Report (Amharic)
+
+  Before generating new statistics, the server was run to analyze the existing Amharic DBpedia mappings.
+
+  *Consider this is a screenshot of the old statistics*
+
+  #### Summary of Mapping Coverage
+
+  | Metric                      | Count | Total | Percentage |
+  |-----------------------------|-------|-------|------------|
+  | Mapped Templates            | 20    | 63    | 31.75%     |
+  | Mapped Template Occurrences | 1918  | 3901  | 49.17%     |
+  | Mapped Properties           | 402   | 2560  | 15.70%     |
+  | Mapped Property Occurrences | 13216 | 27836 | 47.48%     |
+
+  Analysis has been done on old statistics report and identified template limitations, mapping issues, proposed solutions, and executed them successfully.
+
+
+  ### Technical Challenges and Fixes
+
+  #### Problem Encountered
+
+  While generating statistics, the template count consistently returned zero. Templates were being detected, but their associated properties were not. As a result, all templates were ignored in the statistics output. After debugging, I identified that the issue was caused by reliance on `infobox_test.ttl`. This file did not properly support the current dumps.
+
+  #### Fix Implemented
+
+  The solution was to switch from `infobox_test.ttl` to `infobox_properties.ttl`, which contains the required property mappings. This required modifications in the following classes:
+
+  - [CreateMappingStats.scala](https://github.com/contact-andy/extraction-framework/blob/main/server/src/main/scala/org/dbpedia/extraction/server/stats/CreateMappingStats.scala)
+  - [MappingStatsBuilder.scala](https://github.com/contact-andy/extraction-framework/blob/main/server/src/main/scala/org/dbpedia/extraction/server/stats/MappingStatsBuilder.scala)
+
+  After implementing the above changes:
+  - Mapping statistics successfully generated.
+  - Templates and properties were correctly counted.
+
+  Results confirmed that `infobox_properties.ttl` is more reliable for current dumps.
+
+  In addition, **Amharic ignore list** (templates and properties excluded from statistics) has been managed. [View change log](https://github.com/contact-andy/extraction-framework/blob/GSoc-2025-Amharic-Mapping/server/src/main/statistics/ignorelist_am.txt)
+
+  ### Current Amharic Mapping Statistics Report
+
+  [View change log](https://github.com/contact-andy/extraction-framework/blob/GSoc-2025-Amharic-Mapping/server/src/main/statistics/mappingstats_am.txt)
+
+  After applying fixes (ontology corrections, new mappings, and the ignore list), the updated statistics report shows the following:
+
+  ![Updated Statistics Screenshot](./images/updated-statistics-screenshot.png)  
+  *Figure: Screenshot of current mapping statistics*
+
+  ### Summary of Mapping Coverage
+
+  | Metric                      | Count | Total | Percentage | Notes                                  |
+  |-----------------------------|-------|-------|------------|----------------------------------------|
+  | Mapped Templates            | 84    | 84    | 100%       | Achieved full coverage (previously 31.75%) |
+  | Mapped Template Occurrences | 3958  | 3958  | 100%       | All templates aligned and fully mapped |
+  | Mapped Properties           | 2392  | 3095  | 77.29%     | Significant increase from 15.70%       |
+  | Mapped Property Occurrences | 19799 | 19968 | 99.15%     | Major improvement due to property fixes and normalization |
+
+  The improvements demonstrate both breadth and depth: all templates are now covered, template occurrences are fully aligned, and property coverage has improved substantially. However, further effort is still needed to achieve full coverage of properties, especially for rarely used or inconsistent ones.
+
+ 
 
 - **GitHub Contributions**  
   - Updated **amharic mappings**, **mapping statistics report**, and **ignore list** has been submitted as a PR. [view change list](https://github.com/dbpedia/extraction-framework/pull/781)  
