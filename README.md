@@ -10,7 +10,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
 ## Key Achievements and Deliverables  
 
-  ### Wikipedia Templates and Pages 
+  ### 1. Wikipedia Templates and Pages 
 
   During the project, several Wikipedia templates and pages were created or updated to support structured knowledge representation in Amharic Wikipedia. These efforts form the foundation for DBpedia mappings.
 
@@ -26,7 +26,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
   The complete list of created and updated templates is provided in [Appendix A](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf), while the list of created and updated Wikipedia pages is included in [Appendix B](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf). These appendices include both the names and direct links to each resource for easy verification and further exploration.
 
 
-  ### Mapping Coverage Progress  [View Amharic Mapping](https://mappings.dbpedia.org/index.php/Mapping_am)
+  ### 2. Mapping Coverage Progress  [View Amharic Mapping](https://mappings.dbpedia.org/index.php/Mapping_am)
 
   The mapping activity for Amharic DBpedia has shown significant progress compared to the previous status.
 
@@ -35,7 +35,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - **Previous Coverage**: 17 mapped templates  
   - **Current Coverage**: 97 mapped templates
 
-  ##### Breakdown of the 97 Mapped Templates
+  #### Breakdown of the 97 Mapped Templates
 
   - **65 Templates** are in **Amharic** and actively aligned with pages in Amharic Wikipedia.
   - **24 Templates** are in **English**. These were added primarily to ensure **backward compatibility** with existing Wikipedia pages that rely on English-based infoboxes.  
@@ -50,13 +50,11 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - Significant growth in **Amharic-native template support**, strengthening local knowledge representation.
   - Maintained **compatibility with English templates** to preserve continuity, with **translation work identified** as a next step.
 
-  #### Appendix
-
   A detailed breakdown of the created and updated template mappings, including direct links to each, is provided in [Appendix C](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf).
 
 
 
-  ### Mapping Statistics Generation
+  ### 3. Mapping Statistics Generation
 
   Mapping statistics are essential for evaluating the quality and completeness of DBpedia mappings. They provide insights into how many templates and properties are mapped, how frequently they appear in Wikipedia pages, and where inconsistencies or gaps exist. By generating these statistics locally, we can continuously monitor progress, identify problematic mappings, and validate the effectiveness of recent updates to the Amharic DBpedia project.
 
@@ -119,38 +117,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
   The improvements demonstrate both breadth and depth: all templates are now covered, template occurrences are fully aligned, and property coverage has improved substantially. However, further effort is still needed to achieve full coverage of properties, especially for rarely used or inconsistent ones.
 
  
-  ### GitHub Contributions
-
-  #### 1. Improvements to Amharic Mappings and Statistics
-
-  - **Amharic mappings**, the **mapping statistics report**, and the **Amharic ignore list** have been updated and submitted as a Pull Request.
-  - These updates significantly improved coverage of templates and properties, as documented in the new statistics report.
-
-  🔗 [View Pull Request #781](https://github.com/dbpedia/extraction-framework/pull/781)
-
-
-  #### 2. New Method for Generating Mapping Statistics Locally
-
-  - Developed a new approach for generating mapping statistics locally using the `infobox-properties.ttl` file instead of the outdated `infobox_test.ttl`.
-  - This approach solves the issue of templates being detected but their properties being ignored in the statistics output.
-  - This change improves reliability and makes local testing and validation easier for contributors working with newer Wikipedia dumps.
-
-  Code changes to support this are staged and will be submitted as a separate Pull Request.
-
-  [View Code Branch – local-stats-generation](https://github.com/contact-andy/extraction-framework/tree/local-stats-generation)
-
-  
-  #### Summary
-
-  These contributions have improved:
-  - **Mapping coverage** and consistency for the Amharic DBpedia chapter.
-  - **Development tooling** for contributors working with statistics.
-  - **Automation and reliability** in generating and validating mapping data.
-
-
-
-
-  ### Documentation
+  ### 4. Documentation
 
   Provided a comprehensive guide for creating, mapping, and extracting structured data from **Amharic Wikipedia** using the **DBpedia Extraction Framework**.
 
@@ -160,8 +127,8 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
   - Creating and updating Wikipedia templates  
   - Defining mappings  
-  - Generating statistics  
   - Running extractions  
+  - Generating statistics  
   - Querying the resulting knowledge graph  
 
   #### Additional Information
@@ -172,7 +139,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
   **Read the documentation here:** [GSoC 2025 Documentation](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf)
   
 
-  ### Website Development
+  ### 5. Website Development 
 
   Based on the recommendations of my mentors, I have updated the existing website for the **Amharic DBpedia chapter**. The updated website provides users with accessible information about the chapter, including:
 
@@ -200,7 +167,73 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - **Updated Look & Feel:**  
     The user interface and visual style have been refreshed to improve the user experience.
 
+  You can find the website repository [here](https://github.com/AmharicDBpedia/AmharicDBpedia).
   **Visit the website:**  [https://am.dbpedia.org/](https://am.dbpedia.org/)
+
+
+  ### 6. Amharic DBpedia Template Mapping Automation
+
+  Mapping Wikipedia templates to DBpedia is a repetitive and labor-intensive task. Each template and its attributes must be identified, documented, and transformed into a structured mapping format. As the number of templates increases, manually performing these steps becomes inefficient, time-consuming, and error-prone.
+
+  **Automation is crucial** to accelerate the mapping process, ensure consistency across templates, and support large-scale knowledge extraction.
+
+  #### Automation Workflow
+
+  ##### 1. Template Retrieval
+  - Fetch Wikipedia templates (e.g., `Infobox company`, `Infobox book`) using the Wikipedia API.
+  ##### 2. Attribute Extraction
+  - Parse the raw Wikitext and extract attribute names.
+  ##### 3. Automatic Translation
+  - Send the extracted attributes to a machine translation model (e.g., NLLB or Gemini) for English → Amharic translation.
+  ##### 4. Mapping Generation
+  - Use translated attributes to generate DBpedia mapping files (mapping_am.xml).
+  - Align the translated attributes with existing DBpedia ontology properties.
+  ##### 5. Testing & Validation
+  - Run DBpedia extraction with the newly generated mappings.
+  - Query the resulting RDF data using SPARQL to ensure correctness and completeness.
+
+  You can find the source code and progress in the following GitHub repository: [Amharic DBpedia Template Mapping Automation](https://github.com/contact-andy/Amharic_DBpedia_Template_Mapping_Automation)
+
+
+  ### 7. Knowledge Graph Construction
+
+  The Amharic Knowledge Graph has been constructed using the [DBpedia Extraction Framework](https://github.com/dbpedia/extraction-framework). This framework enables the extraction of structured RDF data from Wikipedia articles and templates, following the DBpedia ontology.
+
+  Through this framework, we extracted RDF triples from the Amharic Wikipedia, transforming unstructured content into a machine-readable Knowledge Graph that can be queried and reused for downstream tasks such as NLP, semantic search, and linked data integration.
+
+  The enhanced Amharic Knowledge Graph, containing the extracted and structured data, has been pushed to the following repository:
+
+  [Amharic DBpedia KG Dump – GSoC 2025 Branch](https://github.com/AmharicDBpedia/AmharicDBpedia/tree/GSOC2025/amDbpediaDump/GSoC2025)
+
+  
+  ### 8. Contribution to the DBpedia Extraction Framework
+
+  #### 1. Improvements to Amharic Mappings and Statistics
+
+  - **Amharic mappings**, the **mapping statistics report**, and the **Amharic ignore list** have been updated and submitted as a Pull Request.
+  - These updates significantly improved coverage of templates and properties, as documented in the new statistics report.
+
+  🔗 [View Pull Request #781](https://github.com/dbpedia/extraction-framework/pull/781)
+
+
+  #### 2. New Method for Generating Mapping Statistics Locally
+
+  - Developed a new approach for generating mapping statistics locally using the `infobox-properties.ttl` file instead of the outdated `infobox_test.ttl`.
+  - This approach solves the issue of templates being detected but their properties being ignored in the statistics output.
+  - This change improves reliability and makes local testing and validation easier for contributors working with newer Wikipedia dumps.
+
+  Code changes to support this are staged and will be submitted as a separate Pull Request.
+
+  [View Code Branch – local-stats-generation](https://github.com/contact-andy/extraction-framework/tree/local-stats-generation)
+
+  
+  #### Summary
+
+  These contributions have improved:
+  - **Mapping coverage** and consistency for the Amharic DBpedia chapter.
+  - **Development tooling** for contributors working with statistics.
+  - **Automation and reliability** in generating and validating mapping data.
+
 
 
 ## Blog
