@@ -11,7 +11,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
 ## Key Achievements and Deliverables  
 
-### Wikipedia Templates and Pages**  
+  ### Wikipedia Templates and Pages 
 
   During the project, several Wikipedia templates and pages were created or updated to support structured knowledge representation in Amharic Wikipedia. These efforts form the foundation for DBpedia mappings.
 
@@ -27,15 +27,16 @@ The output will be published as **RDF triples** and made accessible via a user-f
   The complete list of created and updated templates is provided in [Appendix A](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf), while the list of created and updated Wikipedia pages is included in [Appendix B](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf). These appendices include both the names and direct links to each resource for easy verification and further exploration.
 
 
-### Mapping Coverage Progress**  [View Amharic Mapping](https://mappings.dbpedia.org/index.php/Mapping_am)
+  ### Mapping Coverage Progress  [View Amharic Mapping](https://mappings.dbpedia.org/index.php/Mapping_am)
+
   The mapping activity for Amharic DBpedia has shown significant progress compared to the previous status.
 
-  ### Coverage Summary
+  #### Coverage Summary
 
   - **Previous Coverage**: 17 mapped templates  
   - **Current Coverage**: 97 mapped templates
 
-  #### Breakdown of the 97 Mapped Templates
+  ##### Breakdown of the 97 Mapped Templates
 
   - **65 Templates** are in **Amharic** and actively aligned with pages in Amharic Wikipedia.
   - **24 Templates** are in **English**. These were added primarily to ensure **backward compatibility** with existing Wikipedia pages that rely on English-based infoboxes.  
@@ -44,13 +45,13 @@ The output will be published as **RDF triples** and made accessible via a user-f
   - A small number of mapped templates **do not yet have related Wikipedia pages**, which explains their exclusion from current mapping statistics.  
     - These templates are retained to support **potential future use**.
 
-  ### Key Improvements
+  #### Key Improvements
 
   - Expanded from **17 → 97** mapped templates — representing **more than a 5× increase** in coverage.
   - Significant growth in **Amharic-native template support**, strengthening local knowledge representation.
   - Maintained **compatibility with English templates** to preserve continuity, with **translation work identified** as a next step.
 
-  ### Appendix
+  #### Appendix
 
   A detailed breakdown of the created and updated template mappings, including direct links to each, is provided in [Appendix C](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf).
 
