@@ -172,6 +172,37 @@ The output will be published as **RDF triples** and made accessible via a user-f
   **Read the documentation here:** [GSoC 2025 Documentation](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf)
   
 
+  ### Website Development
+
+  Based on the recommendations of my mentors, I have updated the existing website for the **Amharic DBpedia chapter**. The updated website provides users with accessible information about the chapter, including:
+
+  - General overview
+  - Documentation
+  - Resources
+  - GSoC contributors
+  - Mentors
+
+  #### Key Improvements
+
+  - **Semi-Dynamic Website:**  
+    The site is now partially dynamic, powered by content stored in JSON files for easier updates and scalability.
+
+  - **Language Support:**  
+    The website now supports multiple languages:
+    - Amharic
+    - English
+    - German  
+    > *All content has been translated using Google Translate and stored within the JSON structure.*
+
+  - **Menu Reorganization:**  
+    The main navigation menu has been restructured for improved usability and intuitive access to resources.
+
+  - **Updated Look & Feel:**  
+    The user interface and visual style have been refreshed to improve the user experience.
+
+  **Visit the website:**  [https://am.dbpedia.org/](https://am.dbpedia.org/)
+
+
 ## Blog
 
 Throughout the project, progress and milestones have been documented in weekly blog posts. These blogs detail the technical steps, challenges faced, and solutions implemented.  
@@ -187,6 +218,6 @@ Read the blog here: [GSoC 2025 DBpedia Amharic Blog](http://contact-andy.github.
   - Engage the **Amharic Wikipedia community** for validation and refinement.  
   - Work toward **DBpedia Live integration** for Amharic.  
 
---
+
 
 This project lays the foundation for a **fully functional Amharic DBpedia chapter**, bridging the knowledge gap for underrepresented languages and enriching the global Semantic Web.  
