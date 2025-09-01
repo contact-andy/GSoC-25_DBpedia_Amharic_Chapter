@@ -7,7 +7,6 @@ This project proposes to enhance the **Amharic chapter of DBpedia** by extractin
 
 The output will be published as **RDF triples** and made accessible via a user-friendly web interface, following **FAIR (Findable, Accessible, Interoperable, Reusable)** data principles.  
 
----
 
 ## Key Achievements and Deliverables  
 
@@ -101,9 +100,7 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
   In addition, **Amharic ignore list** (templates and properties excluded from statistics) has been managed. [View change log](https://github.com/contact-andy/extraction-framework/blob/GSoc-2025-Amharic-Mapping/server/src/main/statistics/ignorelist_am.txt)
 
-  #### Current Amharic Mapping Statistics Report
-
-  [View change log](https://github.com/contact-andy/extraction-framework/blob/GSoc-2025-Amharic-Mapping/server/src/main/statistics/mappingstats_am.txt)
+  #### Current Amharic Mapping Statistics Report [View change log](https://github.com/contact-andy/extraction-framework/blob/GSoc-2025-Amharic-Mapping/server/src/main/statistics/mappingstats_am.txt)
 
   After applying fixes (ontology corrections, new mappings, and the ignore list), the updated statistics report shows the following:
 
@@ -153,35 +150,43 @@ The output will be published as **RDF triples** and made accessible via a user-f
 
 
 
-- **Documentation** 
-  - Provided a comprehensive **guide for creating, mapping, and extracting structured data** from Amharic Wikipedia using the DBpedia Extraction Framework.  
-  - Covers the **end-to-end workflow**:  
-    - Creating and updating Wikipedia templates  
-    - Defining mappings  
-    - Generating statistics  
-    - Running extractions  
-    - Querying the resulting knowledge graph  
-  - Includes **challenges, solutions, and recommendations** to improve coverage and quality.  
-  - Designed to help **contributors, mentors, and researchers** reproduce, extend, and contribute effectively to the Amharic DBpedia chapter.  
+  ### Documentation
 
-Read the documentation here: [GSoC 2025 Documentation](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf)  
+  Provided a comprehensive guide for creating, mapping, and extracting structured data from **Amharic Wikipedia** using the **DBpedia Extraction Framework**.
 
----
+  #### Covered Workflow
+
+  The documentation covers the end-to-end workflow:
+
+  - Creating and updating Wikipedia templates  
+  - Defining mappings  
+  - Generating statistics  
+  - Running extractions  
+  - Querying the resulting knowledge graph  
+
+  #### Additional Information
+
+  - Includes challenges, solutions, and recommendations to improve coverage and quality.  
+  - Designed to help contributors, mentors, and researchers **reproduce**, **extend**, and **contribute** effectively to the **Amharic DBpedia** chapter.
+
+  **Read the documentation here:** [GSoC 2025 Documentation](https://github.com/AmharicDBpedia/AmharicDBpedia/blob/GSOC2025/documentation/GSoC%202025%20Documentation%20v1.0.pdf)
+  
 
 ## Blog
+
 Throughout the project, progress and milestones have been documented in weekly blog posts. These blogs detail the technical steps, challenges faced, and solutions implemented.  
 
 Read the blog here: [GSoC 2025 DBpedia Amharic Blog](http://contact-andy.github.io/gsoc-2025-dbpedia)  
 
----
 
 ## Next Steps  
-- Expand mappings to cover more Amharic Wikipedia templates.  
-- Finalize and merge PRs for updated statistics and ignore list.  
-- Improve automation with **LLM/NLLB translation pipelines**.  
-- Engage the **Amharic Wikipedia community** for validation and refinement.  
-- Work toward **DBpedia Live integration** for Amharic.  
 
----
+  - Expand mappings to cover more Amharic Wikipedia templates.  
+  - Finalize and merge PRs for updated statistics and ignore list.  
+  - Improve automation with **LLM/NLLB translation pipelines**.  
+  - Engage the **Amharic Wikipedia community** for validation and refinement.  
+  - Work toward **DBpedia Live integration** for Amharic.  
+
+--
 
 This project lays the foundation for a **fully functional Amharic DBpedia chapter**, bridging the knowledge gap for underrepresented languages and enriching the global Semantic Web.  
